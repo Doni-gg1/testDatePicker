@@ -1,6 +1,16 @@
-import { useState } from "react"
-import React from "react"
-import {Calendar, Gregorian} from "react-multi-date-picker"
+import { useState } from "react";
+import React from "react";
+import { Calendar, Gregorian } from "react-multi-date-picker";
+
+import CRUDTable,
+{
+  Fields,
+  Field,
+  CreateForm,
+  UpdateForm,
+  DeleteForm,
+} from 'react-crud-table';
+
 
 class Example extends React.Component {
     constructor(props) {
@@ -45,7 +55,7 @@ class Example extends React.Component {
     render() {
         return (
             <>
-                <input type="text" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+                <input type="text" data-bs-toggle="modal" data-bs-target="#exampleModal" />
 
                 <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
@@ -56,9 +66,9 @@ class Example extends React.Component {
                             </div>
                             <div className="modal-body">
                                 <Calendar
-                                calendar={Gregorian}
-                                value={this.state.today}
-                                onChange={this.setValues} /> 
+                                    calendar={Gregorian}
+                                    value={this.state.today}
+                                    onChange={this.setValues} />
                                 <button onClick={this.handlerClick}>Button</button>
                             </div>
                             <div className="modal-footer">
@@ -69,9 +79,9 @@ class Example extends React.Component {
                     </div>
                 </div>
 
+
+
                 
-
-
 
             </>
 
